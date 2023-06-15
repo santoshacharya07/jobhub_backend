@@ -4,6 +4,7 @@ const dotenv=require('dotenv');
 const mongoose = require('mongoose');
 // const { required } = require('nodemon/lib/config');
 const authRoute=require('./routes/auth');
+const userRoute=require('./routes/user');
 
 
 
@@ -18,6 +19,7 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(express.json());
 
 app.use("/api/",authRoute);
-//localhost:5001/api/register
+app.use("/api/users",userRoute);
+//localhost:5001/api/users/id
 
 app.listen(process.env.PORT || 5002, () => console.log(`Example app listening on port ${process.env.PORT }!`))
