@@ -4,27 +4,27 @@ const { verifyAndAuthorization, veryfyToken, verifyAndAdmin } = require("../midd
 
 
 
-// // POST JOB
 
-// router.put("/:id", verifyAndAuthorization,jobController.createJob);
+
+router.post("/", verifyAndAdmin,jobController.createJob);
 
 
 // //UPDATE JOB
 
-// router.put("/:id", verifyAndAuthorization,jobController.updateJob);
+router.put("/:id", verifyAndAdmin,jobController.updateJob);
 
 // //DELETE JOB
 
-// router.delete("/:id", verifyAndAuthorization,jobController.deleteJob);
+router.delete("/:id", verifyAndAdmin,jobController.deleteJob);
 
 // //GET JOB
-// router.get("/:id", jobController.getJob);
+router.get("/:id", jobController.getJob);
 
 
 // //GET JOBS 
-// router.get("/", jobController.getAllJobs);
+router.get("/", jobController.getAllJobs);
 
 // //SEARCH JOBS 
-// router.get("/search/:key", jobController.searchJob);
+router.get("/search/:key", jobController.searchJobs);
 
 module.exports = router
