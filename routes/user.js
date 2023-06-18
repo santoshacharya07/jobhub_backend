@@ -5,14 +5,14 @@ const { verifyAndAuthorization, veryfyToken, verifyAndAdmin } = require("../midd
 
 //update user
 
-router.put("/:id", verifyAndAuthorization,userController.updateUser);
+router.put("/", verifyAndAuthorization,userController.updateUser);
 
 //delete user
 
-router.delete("/:id", verifyAndAuthorization,userController.deleteUSer);
+router.delete("/", verifyAndAuthorization,userController.deleteUSer);
 
 //get user
-router.get("/:id", verifyAndAuthorization,userController.getUser);
+router.get("/", verifyAndAuthorization,userController.getUser);
 
 
 //get user is admin 
